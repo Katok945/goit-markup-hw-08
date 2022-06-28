@@ -1,0 +1,107 @@
+.footer {
+    background-color: var(--second-background-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    display: flex;
+    align-items: baseline;
+}
+
+.footer__section {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer__container {
+    margin-right: 70px;
+}
+
+.footer__logo {
+    display: block;
+    margin-bottom: 20px;
+    color: var(--white-text-color);
+}
+
+.footer__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.footer__geo{
+    line-height: 1.71;
+    font-style: normal;
+    color: var(--white-text-color);
+
+    transition-property: background-color;
+    transition-duration: var(--main-duration);
+    transition-timing-function: var(--main-cubic);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.footer__link {
+    line-height: 1.71;
+    font-style: normal;
+    color: var(--footer-color);
+
+    transition-property: background-color;
+    transition-duration: var(--main-duration);
+    transition-timing-function: var(--main-cubic);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.footer__soc {
+    margin-right: auto;
+}
+
+.footer__soc-text {
+    font-family: 'Roboto', sans-serif;
+    @include font(700, 14px, 1.14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-text-color);
+    margin-bottom: 20px;
+}
+
+.footer__soc-list {
+    display: flex;
+}
+
+.footer__soc-item {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition-property: background-color;
+    transition-duration: var(--main-duration);
+    transition-timing-function: var(--main-cubic);
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: var(--third-background-color);
+    }
+}
+
+.footer__soc-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__soc-icon {
+    fill: #FFFFFF;
+}
