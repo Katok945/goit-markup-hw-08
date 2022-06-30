@@ -7,16 +7,18 @@
 }
 
 .form__subscribe-field {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include desktop {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
 }
 
 .form__subscribe-input {
-    width: 358px;
+    width: 450px;
     height: 50px;
     padding-left: 16px;
-    margin-right: 12px;
+    margin-right: 15px;
 
     color: var(--white-text-color);
     background-color: var(--second-background-color);
@@ -24,9 +26,15 @@
     border-radius: 4px;
     outline: none;
 
+    margin-bottom: 20px;
+
     &::placeholder {
         font-size: 16px;
         color: rgba(255, 255, 255, 0.6);
+    }
+
+    @include desktop {
+        width: 358px;
     }
 }
 

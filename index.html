@@ -23,6 +23,14 @@
         <div class="container header__page">
             
                 <a class="logo header__logo link" href=""><span class="logo__accent">Web</span>Studio</a>
+
+                <button type="button" class="menu-button" data-menu-button aria-expanded="false">
+                    <svg class="mobile-menu" width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use href="./images/symbol-defs.svg#icon-mobile-menu"></use>
+                        <use href="./images/symbol-defs.svg#icon-mobile-menu-close"></use>
+                    </svg>
+                </button>
+
                 <nav class="nav">
                 <ul class="nav__list list">
                     <li class="nav__item">
@@ -59,7 +67,7 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1 class="hero__title ">Эффективные решения для вашего бизнеса</h1>
+                <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
                 <button class="hero__button" type="button" data-modal-open >Заказать услугу</button>
             </div>
         </section>
@@ -149,7 +157,16 @@
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__list list">
                     <li class="team__item">
-                        <img src="./images/игорь.jpg" alt="фото Игоря" width="270">
+                        <picture>
+                            <source srcset="./images/team1-desktop.jpg 270w, 
+                            ./images/team1-tablet.jpg 354w, 
+                            ./images/team1-mobile.jpg 450w, 
+                            ./images/team1-desktop@2x.jpg 540w, 
+                            ./images/team1-tablet@2x.jpg 708w, 
+                            ./images/team1-mobile@2x.jpg 900w"
+                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw">
+                            <img src="./images/team1-desktop.jpg" alt="фото Игоря">
+                        </picture>
                         <div class="team__employee">
                             <h3 class="employee__top-text">Игорь Демьяненко</h3>
                             <p class="employee__text">Product Designer</p>
@@ -186,7 +203,16 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/ольга.jpg" alt="фото Ольги" width="270">
+                        <picture>
+                            <source srcset="./images/team2-desktop.jpg 270w, 
+                            ./images/team2-tablet.jpg 354w, 
+                            ./images/team2-mobile.jpg 450w, 
+                            ./images/team2-desktop@2x.jpg 540w, 
+                            ./images/team2-tablet@2x.jpg 708w,
+                            ./images/team2-mobile@2x.jpg 900w"
+                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw">
+                            <img src="./images/team2-desktop.jpg" alt="фото Ольги">
+                        </picture>
                         <div class="team__employee">
                             <h3 class="employee__top-text">Ольга Репина</h3>
                             <p class="employee__text">Frontend Developer</p>
@@ -223,7 +249,16 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/николай.jpg" alt="фото Николая" width="270">
+                        <picture>
+                            <source srcset="./images/team3-desktop.jpg 270w, 
+                            ./images/team3-tablet.jpg 354w, 
+                            ./images/team3-mobile.jpg 450w, 
+                            ./images/team3-desktop@2x.jpg 540w, 
+                            ./images/team3-tablet@2x.jpg 708w,
+                            ./images/team3-mobile@2x.jpg 900w"
+                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw">
+                            <img src="./images/team3-desktop.jpg" alt="фото Николая">
+                        </picture>
                         <div class="team__employee">
                             <h3 class="employee__top-text">Николай Тарасов</h3>
                             <p class="employee__text">Marketing</p>
@@ -260,7 +295,16 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/михаил.jpg" alt="фото Михаила" width="270">
+                        <picture>
+                            <source srcset="./images/team4-desktop.jpg 270w, 
+                            ./images/team4-tablet.jpg 354w, 
+                            ./images/team4-mobile.jpg 450w, 
+                            ./images/team4-desktop@2x.jpg 540w, 
+                            ./images/team4-tablet@2x.jpg 708w,
+                            ./images/team4-mobile@2x.jpg 900w"
+                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw">
+                            <img src="./images/team4-desktop.jpg" alt="фото Михаила">
+                        </picture>
                         <div class="team__employee">
                             <h3 class="employee__top-text">Михаил Ермаков</h3>
                             <p class="employee__text">UI Designer</p>
