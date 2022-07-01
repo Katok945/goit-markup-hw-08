@@ -1,15 +1,25 @@
 .examples__list {
-    display: flex;
-    flex-wrap: wrap;
 
-    margin-right: calc( -1 * var(--typical-mrg));
-    margin-bottom: calc(-1 * var(--typical-mrg));
+    @media screen and (max-width: 1199px) {
+        margin: 15px;
+    }
+    
+    @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+
+        margin-right: calc( -1 * var(--typical-mrg));
+        margin-bottom: calc(-1 * var(--typical-mrg));
+    }
 }
 
 .examples__item {
     flex-basis: calc(100% / 3 - var(--typical-mrg));
-    margin-right: var(--typical-mrg);
     margin-bottom: var(--typical-mrg);
+
+    @include desktop {
+        margin-right: var(--typical-mrg);
+    }
 }
 
 .examples__link {

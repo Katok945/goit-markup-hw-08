@@ -637,10 +637,14 @@ button {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+@media screen and (max-width: 1199px) {
+  .team__item {
+    margin: 15px;
+  }
+}
 @media screen and (min-width: 768px) {
   .team__item {
     width: 354px;
-    margin: 15px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -964,8 +968,23 @@ button {
 
 .filter__list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 1199px) {
+  .filter__list {
+    row-gap: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filter__list {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter__list {
+    margin-bottom: 50px;
+  }
 }
 
 .filter__item:not(:last-child) {
@@ -993,17 +1012,28 @@ button {
   border-radius: 4px;
 }
 
-.examples__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: calc(-1 * var(--typical-mrg));
-  margin-bottom: calc(-1 * var(--typical-mrg));
+@media screen and (max-width: 1199px) {
+  .examples__list {
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .examples__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: calc(-1 * var(--typical-mrg));
+    margin-bottom: calc(-1 * var(--typical-mrg));
+  }
 }
 
 .examples__item {
   flex-basis: calc(33.3333333333% - var(--typical-mrg));
-  margin-right: var(--typical-mrg);
   margin-bottom: var(--typical-mrg);
+}
+@media screen and (min-width: 1200px) {
+  .examples__item {
+    margin-right: var(--typical-mrg);
+  }
 }
 
 .examples__link {
