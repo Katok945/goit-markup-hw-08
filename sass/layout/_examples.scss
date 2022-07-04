@@ -1,7 +1,14 @@
 .examples__list {
 
-    @media screen and (max-width: 1199px) {
-        margin: 15px;
+    // @media screen and (max-width: 1199px) {
+    //     margin: 15px;
+    // }
+
+    @include tablet {
+        margin: -15px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: calc((100% - 2 * 30px) / 2);
     }
     
     @include desktop {
@@ -14,11 +21,18 @@
 }
 
 .examples__item {
-    flex-basis: calc(100% / 3 - var(--typical-mrg));
+    // flex-basis: calc(100% / 3 - var(--typical-mrg));
     margin-bottom: var(--typical-mrg);
 
+    @include tablet{
+        width: 354px;
+        margin: 15px;
+    }
+
     @include desktop {
-        margin-right: var(--typical-mrg);
+        // margin-right: var(--typical-mrg);
+        width: 370px;
+        flex-basis: calc(100% / 3 - var(--typical-mrg));
     }
 }
 
@@ -78,7 +92,7 @@
 }
 
 .examples__title {
-    @include font(null, 18px, 2);
+    @include font(700, 18px, 2);
     letter-spacing: 0.06em;
     margin-bottom: 4px;
     color: var(--second-text-color);

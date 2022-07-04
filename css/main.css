@@ -333,6 +333,11 @@ button {
 .header {
   border-bottom: 1px solid #ECECEC;
 }
+@media screen and (max-width: 767px) {
+  .header {
+    position: relative;
+  }
+}
 
 .header__page {
   display: flex;
@@ -342,7 +347,6 @@ button {
 .header__logo {
   padding-top: 24px;
   padding-bottom: 25px;
-  margin-right: 93px;
   color: var(--black-text-color);
 }
 
@@ -405,6 +409,15 @@ button {
 
 .contacts__item:not(:last-child) {
   margin-right: 50px;
+}
+
+.menu-button {
+  position: fixed;
+  top: 10px;
+  left: 425px;
+  z-index: 1;
+  border: none;
+  background-color: transparent;
 }
 
 .hero {
@@ -1012,9 +1025,12 @@ button {
   border-radius: 4px;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .examples__list {
-    margin: 15px;
+    margin: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: calc((100% - 60px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1027,12 +1043,18 @@ button {
 }
 
 .examples__item {
-  flex-basis: calc(33.3333333333% - var(--typical-mrg));
   margin-bottom: var(--typical-mrg);
+}
+@media screen and (min-width: 768px) {
+  .examples__item {
+    width: 354px;
+    margin: 15px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .examples__item {
-    margin-right: var(--typical-mrg);
+    width: 370px;
+    flex-basis: calc(33.3333333333% - var(--typical-mrg));
   }
 }
 
@@ -1084,6 +1106,7 @@ button {
 }
 
 .examples__title {
+  font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;

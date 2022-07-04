@@ -1,5 +1,9 @@
 .header {
-    border-bottom: 1px solid #ECECEC
+    border-bottom: 1px solid #ECECEC;
+
+    @media screen and (max-width: 767px) {
+        position: relative;
+    }
 }
 
 .header__page {
@@ -10,7 +14,7 @@
 .header__logo {
     padding-top: 24px;
     padding-bottom: 25px;
-    margin-right: 93px;
+    // margin-right: 93px;
     color: var(--black-text-color);
 }
 
@@ -79,4 +83,13 @@
 
 .contacts__item:not(:last-child) {
     margin-right: 50px;
+}
+
+.menu-button {
+    position: fixed;
+    top: 10px;
+    left: 425px;
+    z-index: 1;
+    border: none;
+    background-color: transparent
 }
