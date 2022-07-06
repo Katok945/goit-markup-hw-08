@@ -546,7 +546,7 @@ button {
 }
 
 .hero__title {
-  width: 360px;
+  width: 100%;
   margin: 0 auto;
   font-weight: 900;
   font-size: 26px;
@@ -555,6 +555,11 @@ button {
   text-transform: uppercase;
   color: var(--white-text-color);
   margin-bottom: var(--typical-mrg);
+}
+@media screen and (min-width: 480px) {
+  .hero__title {
+    width: 360px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
@@ -619,7 +624,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 450px;
+  width: 100%;
   height: 120px;
   margin-bottom: var(--typical-mrg);
   border-radius: 4px;
@@ -1018,7 +1023,7 @@ button {
 }
 
 .form__subscribe-input {
-  width: 450px;
+  width: 100%;
   height: 50px;
   padding-left: 16px;
   margin-right: 15px;
@@ -1033,7 +1038,7 @@ button {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .form__subscribe-input {
     width: 358px;
   }
@@ -1044,7 +1049,7 @@ button {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 200px;
+  width: 100%;
   height: 50px;
   font-weight: 700;
   font-size: 16px;
@@ -1060,6 +1065,11 @@ button {
 }
 .subscribe__button:hover, .subscribe__button:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 480px) {
+  .subscribe__button {
+    width: 200px;
+  }
 }
 
 .subscribe__button-icon {
@@ -1154,6 +1164,13 @@ button {
 .examples__link:hover, .examples__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+@media screen and (max-width: 1199px) {
+  .examples__link {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .examples__thumb {
   position: relative;
@@ -1190,6 +1207,11 @@ button {
   border-left: 1px solid #EEEEEE;
   border-right: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
+}
+@media screen and (max-width: 1199px) {
+  .examples__content {
+    flex-grow: 1;
+  }
 }
 
 .examples__title {
