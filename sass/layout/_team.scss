@@ -51,5 +51,8 @@
 
     @include desktop {
         width: 270px;
+        &:not(:last-child) {
+            margin-right: var(--typical-mrg);
+        }
     }
 }

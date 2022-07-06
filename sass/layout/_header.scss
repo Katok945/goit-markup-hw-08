@@ -13,10 +13,18 @@
 
 .header__logo {
     padding: 16px 0;
-    // padding-top: 24px;
-    // padding-bottom: 25px;
-    // margin-right: 93px;
+
     color: var(--black-text-color);
+
+    @include tablet {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 88px;
+    }
+
+    @include desktop {
+        margin-right: 93px;
+    }
 }
 
 .logo__accent {
@@ -25,6 +33,10 @@
 
 .nav {
     display: none;
+
+    @include tablet {
+        display: flex;
+    }
 }
 
 .nav__list {
@@ -59,15 +71,33 @@
 .contacts {
     display: none;
 
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // margin-left: auto;
+    @include tablet {
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include desktop{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+    }
+
 }
 
 .contacts__icon {
-    margin-right: 10px;
+    margin-right: 8px;
     fill: currentColor;
+
+    @media screen and (max-width: 1199px) {
+        width: 10px;
+        height: 14px;
+    }
+
+    @include desktop {
+        margin-right: 10px;
+    }
 }
 
 .contacts__link {
@@ -86,9 +116,19 @@
     &:focus {
         color: var(--accent-color);
     }
+
+    @media screen and (max-width: 1199px) {
+        @include font(500, 12px, 1.16);
+        font-weight: 500;
+    }
 }
 
 .contacts__item:not(:last-child) {
-    margin-right: 50px;
-}
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 10px;
+    }
 
+    @include desktop{
+        margin-right: 50px;
+    }
+}

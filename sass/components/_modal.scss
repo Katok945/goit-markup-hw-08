@@ -1,11 +1,21 @@
 .modal {
+    @include mobile {
+        width: 450px;
+        min-height: 609px;
+    }
+
+    @include desktop {
+        width: 528px;
+        min-height: 581px;
+    }
+
     position: absolute;
     top: 50%;
     left: 50%;
     padding: 40px;
     transform: translate(-50%, -50%) scale(1);
-    width: 528px;
-    min-height: 581px;
+    width: 100%;
+    // min-height: 581px;
     background-color: var(--main-background-color);
     border-radius: 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -45,11 +55,15 @@
 
 .modal__form-text {
     margin-bottom: 12px;
-    @include font(700, 20px, 1.15);
+    @include font(700, 20px, 1.5);
     text-align: center;
     letter-spacing: 0.03em;
 
     color: var(--second-text-color);
+
+    @include desktop {
+        @include font(700, 20px, 1.15);
+    }
 }
 
 .modal__field {
@@ -137,10 +151,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 8px;
+    margin-left: 20px;
 
-    @include font(null, 14px, 1.71);
+    @include font(null, 12px, 1.16);
     color: var(--main-text-color);
+
+    @include desktop {
+        @include font(null, 14px, 1.71);
+        margin-left: 8px;
+    }
 }
 
 .checkbox__input {
@@ -151,8 +170,8 @@
 
 .checkbox__icon {
     position: absolute;
-    top: 4px;
-    left: 5px;
+    top: 0;
+    left: 0;
     width: 16px;
     height: 15px;
 
@@ -161,6 +180,11 @@
         background-color: var(--third-background-color);
         border: none;
         border-radius: 3px;
+    }
+
+    @include desktop {
+        top: 4px;
+        left: 5px;
     }
 }
 
@@ -191,6 +215,7 @@
     width: 200px;
     height: 50px;
     padding: 10px 55px 10px 56px;
+    margin: 0 auto;
     @include font(700, 16px, 1.88);
     letter-spacing: 0.06em;
     border-radius: 4px;
